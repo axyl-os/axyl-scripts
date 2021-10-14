@@ -1,0 +1,9 @@
+#!/bin/env bash
+# Description: Metadata for dmenu stuff
+
+# dmenu colors
+if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
+  bg="#0F131F"
+  altbg="#5b99aa"
+  fg="#82dbf4"
+fi
