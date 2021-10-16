@@ -6,4 +6,8 @@ if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
   bg="#0F131F"
   altbg="#5b99aa"
   fg="#82dbf4"
+elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
+  bg="#1E222A"
+  altbg="#5C6370"
+  fg="#ABB2BF"
 fi
