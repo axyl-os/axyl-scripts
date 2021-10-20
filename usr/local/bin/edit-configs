@@ -2,25 +2,49 @@
 
 source colors
 
-# default terminal
-DEF_TERM="alacritty --config-file $HOME/.config/qtile/alacritty/alacritty.yml"
-
 # default editor
-DEF_EDITOR="vim"
+DEF_EDITOR="nvim"
 
 FONT="Source Code Pro Medium:size=12"
 
 # list of configs
-declare -a options=(
-"Alacritty - $HOME/.config/qtile/alacritty/alacritty.yml"
-"Alacritty (Fonts) - $HOME/.config/qtile/alacritty/fonts.yml"
-"Autostart - $HOME/.config/qtile/scripts/autostart.sh"
-"Feh (Wallpaper Background) - $HOME/.config/qtile/scripts/.fehbg"
-"Fish - $HOME/.config/fish/config.fish"
-"Picom - $HOME/.config/qtile/picom.conf"
-"Qtile - $HOME/.config/qtile/config.py"
-"Vim - $HOME/.vimrc"
-)
+if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
+  CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+  declare -a options=( 
+  "Alacritty - $HOME/.config/qtile/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.config/qtile/alacritty/fonts.yml"
+  "Autostart - $HOME/.config/qtile/scripts/autostart.sh"
+  "Feh (Wallpaper Background) - $HOME/.config/qtile/scripts/.fehbg"
+  "Fish - $HOME/.config/fish/config.fish"
+  "Picom - $HOME/.config/qtile/picom.conf"
+  "Qtile - $HOME/.config/qtile/config.py"
+  "Vim - $HOME/.vimrc"
+  )
+elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
+  CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
+  declare -a options=( 
+  "Alacritty - $HOME/.dwm/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.dwm/alacritty/fonts.yml"
+  "Autostart - $HOME/.dwm/scripts/autostart.sh"
+  "Feh (Wallpaper Background) - $HOME/.dwm/.fehbg"
+  "Fish - $HOME/.config/fish/config.fish"
+  "Picom - $HOME/.dwm/picom.conf"
+  "dwm - /opt/axyl-dwm/config.def.h"
+  "Vim - $HOME/.vimrc"
+  )
+elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+  declare -a options=( 
+  "Alacritty - $HOME/.config/bspwm/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.config/bspwm/alacritty/fonts.yml"
+  "BSPWM - $HOME/.config/bspwm/bspwmrc"
+  "SXHKD - $HOME/.config/sxhkd/sxhkdrc"
+  "Feh (Wallpaper Background) - $HOME/.config/bspwm/.fehbg"
+  "Fish - $HOME/.config/fish/config.fish"
+  "Picom - $HOME/.config/bspwm/picom.conf"
+  "Vim - $HOME/.vimrc"
+  )
+fi
 
 # creates the menu
 choice=$(printf '%s\n' "${options[@]}" | sort -u | dmenu -c -i -l 10 -nb "$bg" -nf "$fg" -sb "$altbg" -sf "$fg" -fn "$FONT" -p 'Edit Config:')
@@ -29,10 +53,7 @@ choice=$(printf '%s\n' "${options[@]}" | sort -u | dmenu -c -i -l 10 -nb "$bg" -
 # exits otherwise
 if [ "$choice" ]; then
     cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    $DEF_TERM -e $DEF_EDITOR "$cfg"
-
+    alacritty --config-file "$CONFIG" -e $DEF_EDITOR "$cfg"
 else
     echo "Exiting..."; exit 1
 fi
-
-

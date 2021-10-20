@@ -1,10 +1,12 @@
 #!/bin/env bash
 
 # quick ranger launch script
-if [[ "$DESKTOP_SESSION" == "dwm" ]]; then
-    CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
-elif [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
-    CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
+  CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
+  CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
 fi
 
 alacritty --class "Rangerfm,Rangerfm" --config-file "$CONFIG" -e ranger

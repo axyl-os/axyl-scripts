@@ -10,4 +10,8 @@ elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
   bg="#1E222A"
   altbg="#5C6370"
   fg="#ABB2BF"
+elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+  bg="#282a36"
+  altbg="#555555"
+  fg="#f8f8f2"
 fi
