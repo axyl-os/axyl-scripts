@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
+  CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
+  CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+fi
+
+alacritty --config-file "$CONFIG"
