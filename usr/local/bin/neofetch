@@ -5845,25 +5845,24 @@ EOF
         "Axyl"*)
             set_colors 6 6 7 1
             read -rd '' ascii_data <<'EOF'
-${c1}                      ,                      
-                     .d;                     
-                    .ddd.                    
-                    odddd.                   
-                   ldddddo                   
-                   dddddddl                  
-                 ,.. odddddl                 
-                ,ddoc:odddddc                
-               .    .ddd.    .               
-${c2}              .  cc  ldd  cc  :              
-             .d'    .odd.    .d;             
-            .:  ;,,:d.:.dc,,;  ';            
-           .d;      d. .o      .d;           
-          'dd; ,o;   .l'   ;o; .dd:          
-         'ddd; ,dd         dd; .c;           
-        'dddd; ,.            ; .ddl'         
-       ,ddddd                   ddddo;       
-      ;dd                           od:      
-     .                                 .    
+${c1}                     .. 
+                    .od' 
+                   .dddd;
+                  .dddddd;
+                 'dddddddd:
+                 :dddddddddl
+               ;'.  ldddddddl
+              ldddo::ldddddddo'
+            .      'dddd;      '
+${c2}           ,  .cl;  lddd  ,lc.  c
+          cd,      .oddd.      'do.
+        .o.  .:,,;ld.;: dl;,,;'   d,
+       ,dd        .d.  .o,        ddc
+      cddd  'dl;.   .ll.    ,cd;  dddo.
+    .odddd  'ddd.           ddd;  lc;.
+   ,dddddd  ';                ';  dddo:'
+  cdddddd.                        .ddddddc.
+'odd                                    odd;
 EOF
         ;;
 
