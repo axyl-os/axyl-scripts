@@ -44,6 +44,18 @@ elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
   "Picom - $HOME/.config/bspwm/picom.conf"
   "Vim - $HOME/.vimrc"
   )
+elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
+  CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
+  declare -a options=( 
+  "Alacritty - $HOME/.xmonad/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.xmonad/alacritty/fonts.yml"
+  "Autostart - $HOME/.xmonad/bin/autostart.sh"
+  "Feh (Wallpaper Background) - $HOME/.xmonad/.fehbg"
+  "Fish - $HOME/.config/fish/config.fish"
+  "Picom - $HOME/.xmonad/picom.conf"
+  "Xmonad - $HOME/.xmonad/xmonad.hs"
+  "Vim - $HOME/.vimrc"
+  )
 fi
 
 # creates the menu

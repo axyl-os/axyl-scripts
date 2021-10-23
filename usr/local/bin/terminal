@@ -6,6 +6,8 @@ elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
   CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
 elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
   CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
+  CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
 fi
 
 alacritty --config-file "$CONFIG"
