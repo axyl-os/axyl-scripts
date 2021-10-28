@@ -10,4 +10,13 @@ elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
   CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
 fi
 
-alacritty --config-file "$CONFIG"
+case "$1" in
+  '-f')
+          alacritty --class 'Alafloat,Alafloat' --config-file "$CONFIG"
+          ;;
+  '-m')
+          alacritty --class 'Alamax,Alamax' --config-file "$CONFIG" -o window.startup_mode=fullscreen window.padding.x=30 window.padding.y=30
+          ;;
+  *)
+          alacritty --config-file "$CONFIG"
+esac
