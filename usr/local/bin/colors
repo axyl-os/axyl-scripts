@@ -3,9 +3,9 @@
 
 # dmenu colors
 if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
-  bg="#282c34"
-  altbg="#5C6370"
-  fg="#bbc2cf"
+  bg="#1d1f21"
+  altbg="#666666"
+  fg="#c5c8c6"
 elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
   bg="#1E222A"
   altbg="#5C6370"
