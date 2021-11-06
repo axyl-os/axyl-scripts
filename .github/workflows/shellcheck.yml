@@ -12,4 +12,5 @@ jobs:
       uses: ludeeus/action-shellcheck@master
       with:
         scandir: './usr/local/bin'
-        severity: error
+      env:
+        SHELLCHECK_OPTS: -e SC2034 -e SC2154
