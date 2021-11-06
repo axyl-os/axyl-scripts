@@ -18,4 +18,8 @@ elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
   bg="#2E3440"
   altbg="#4C566A"
   fg="#D8DEE9"
+elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
+  bg="#282828"
+  altbg="#928374"
+  fg="#ebdbb2"
 fi

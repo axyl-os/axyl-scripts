@@ -8,6 +8,8 @@ elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
   CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
 elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
   CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
+elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
+  CONFIG="$HOME/.config/spectrwm/alacritty/alacritty.yml"
 fi
 
 case "$1" in
