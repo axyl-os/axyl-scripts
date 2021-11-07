@@ -69,6 +69,15 @@ elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
   "Baraction - $HOME/.config/spectrwm/baraction.sh"
   "Vim - $HOME/.vimrc"
   )
+elif [[ "$DESKTOP_SESSION" == "LeftWM" ]]; then
+  CONFIG="$HOME/.config/leftwm/alacritty/alacritty.yml"
+  declare -a options=(
+  "Alacritty - $HOME/.config/leftwm/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.config/leftwm/alacritty/fonts.yml"
+  "Fish - $HOME/.config/fish/config.fish"
+  "LeftWM - $HOME/.config/leftwm/config.toml"
+  "Vim - $HOME/.vimrc"
+  )
 fi
 
 # creates the menu

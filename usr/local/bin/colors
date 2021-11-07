@@ -22,4 +22,8 @@ elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
   bg="#282828"
   altbg="#928374"
   fg="#ebdbb2"
+elif [[ "$DESKTOP_SESSION" == "LeftWM" ]]; then
+  bg="#1a1b26"
+  altbg="#444b6a"
+  fg="#a9b1d6"
 fi
