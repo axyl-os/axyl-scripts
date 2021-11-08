@@ -4,7 +4,7 @@
 
 # Get Volume
 get_volume() {
-	volume=`amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]'`
+	volume=$(amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]')
 	echo "$volume"
 }
 
@@ -37,7 +37,7 @@ dec_volume() {
 
 # Toggle Mute
 toggle_mute() {
-	status=`amixer get Master | tail -n1 | grep -wo 'on'`
+    status=$(amixer get Master | tail -n1 | grep -wo 'on')
 
 	if [[ "$status" == "on" ]]; then
 		amixer set Master toggle && dunstify -u low --replace=69 -i '/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-muted-symbolic.svg' "Mute"

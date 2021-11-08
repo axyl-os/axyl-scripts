@@ -13,4 +13,4 @@ jobs:
       with:
         scandir: './usr/local/bin'
       env:
-        SHELLCHECK_OPTS: -e SC2034 -e SC2154
+        SHELLCHECK_OPTS: -x -e SC2034 -e SC2154 -e SC1091

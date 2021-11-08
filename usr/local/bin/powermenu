@@ -12,6 +12,6 @@ case "$choice" in
   1) systemctl suspend          ;;
   2) poweroff			;;
   3) reboot 			;;
-  4) pkill -KILL -u $USER &	;;
+  4) pkill -KILL -u "$USER" &	;;
 esac
 
