@@ -78,6 +78,16 @@ elif [[ "$DESKTOP_SESSION" == "LeftWM" ]]; then
   "LeftWM - $HOME/.config/leftwm/config.toml"
   "Vim - $HOME/.vimrc"
   )
+elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
+  CONFIG="$HOME/.config/i3/alacritty/alacritty.yml"
+  declare -a options=(
+  "Alacritty - $HOME/.config/i3/alacritty/alacritty.yml"
+  "Alacritty (Fonts) - $HOME/.config/i3/alacritty/fonts.yml"
+  "Fish - $HOME/.config/fish/config.fish"
+  "Picom - $HOME/.config/i3/picom.conf"
+  "i3wm - $HOME/.config/i3/config"
+  "Vim - $HOME/.vimrc"
+  )
 fi
 
 # creates the menu
