@@ -83,6 +83,7 @@ elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
   declare -a options=(
   "Alacritty - $HOME/.config/i3/alacritty/alacritty.yml"
   "Alacritty (Fonts) - $HOME/.config/i3/alacritty/fonts.yml"
+  "Autostart - $HOME/.config/i3/bin/autostart.sh"
   "Fish - $HOME/.config/fish/config.fish"
   "Picom - $HOME/.config/i3/picom.conf"
   "i3wm - $HOME/.config/i3/config"
