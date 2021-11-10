@@ -23,6 +23,10 @@ case "$1" in
   '-m')
           alacritty --class 'Alamax,Alamax' --config-file "$CONFIG" -o window.startup_mode=fullscreen window.padding.x=30 window.padding.y=30
           ;;
-  *)
+
+  '-e')
+          alacritty --config-file "$CONFIG" -e "$2"
+          ;;
+     *)
           alacritty --config-file "$CONFIG"
 esac
