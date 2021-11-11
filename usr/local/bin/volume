@@ -26,12 +26,12 @@ get_icon() {
 }
 
 # Increase Volume
-inc_volume() {
+up_volume() {
 	amixer -Mq set Master,0 5%+ unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)"
 }
 
 # Decrease Volume
-dec_volume() {
+down_volume() {
 	amixer -Mq set Master,0 5%- unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)"
 }
 
@@ -49,10 +49,10 @@ toggle_mute() {
 # Execute accordingly
 if [[ "$1" == "--get" ]]; then
 	get_volume
-elif [[ "$1" == "--inc" ]]; then
-	inc_volume
-elif [[ "$1" == "--dec" ]]; then
-	dec_volume
+elif [[ "$1" == "--up" ]]; then
+	up_volume
+elif [[ "$1" == "--down" ]]; then
+        down_volume
 elif [[ "$1" == "--toggle" ]]; then
 	toggle_mute
 else

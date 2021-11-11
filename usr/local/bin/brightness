@@ -3,7 +3,7 @@
 ## Script To Manage Brightness For Axyl OS.
 
 # Graphics card
-CARD=$(find /sys/class/backlight | head -n 1)
+CARD=$(basename "$(find /sys/class/backlight/* | head -n 1)")
 
 # Get brightness
 get_backlight() {
@@ -52,9 +52,9 @@ dec_backlight() {
 # Execute accordingly
 if [[ "$1" == "--get" ]]; then
 	get_backlight
-elif [[ "$1" == "--inc" ]]; then
+elif [[ "$1" == "--up" ]]; then
 	inc_backlight
-elif [[ "$1" == "--dec" ]]; then
+elif [[ "$1" == "--down" ]]; then
 	dec_backlight
 else
 	get_backlight
