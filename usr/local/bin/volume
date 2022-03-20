@@ -4,7 +4,7 @@
 
 # Get Volume
 get_volume() {
-	volume=$(amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]')
+	volume=$(echo $(pamixer --get-volume))
 	echo "$volume"
 }
 
@@ -27,22 +27,22 @@ get_icon() {
 
 # Increase Volume
 up_volume() {
-	amixer -Mq set Master,0 5%+ unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)"
+	pamixer -i 5 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
 }
 
 # Decrease Volume
 down_volume() {
-	amixer -Mq set Master,0 5%- unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)"
+	pamixer -d 5 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
 }
 
 # Toggle Mute
 toggle_mute() {
-    status=$(amixer get Master | tail -n1 | grep -wo 'on')
+    status=$(pamixer --get-mute)
 
-	if [[ "$status" == "on" ]]; then
-		amixer set Master toggle && dunstify -u low --replace=69 -i '/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-muted-symbolic.svg' "Mute"
+	if [[ "$status" == "true" ]]; then
+		pamixer --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
 	else
-		amixer set Master toggle && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
+		pamixer --mute && dunstify -u low --replace=69 -i '/usr/share/icons/Papirus-Dark/symbolic/status/audio-volume-muted-symbolic.svg' "Mute"
 	fi
 }
 
