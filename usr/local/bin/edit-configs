@@ -5,7 +5,7 @@ source colors
 # default editor
 DEF_EDITOR="nvim"
 
-FONT="Source Code Pro Medium:size=12"
+FONT="JetBrainsMono Nerd Font:size=12"
 
 # list of configs
 if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
@@ -92,7 +92,9 @@ choice=$(printf '%s\n' "${options[@]}" | sort -u | dmenu -c -i -l 10 -nb "$bg" -
 # exits otherwise
 if [ "$choice" ]; then
     cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    alacritty --config-file "$CONFIG" -e $DEF_EDITOR "$cfg"
+
+    #alacritty --config-file "$CONFIG" -e $DEF_EDITOR "$cfg"
+    xfce4-terminal -x $DEF_EDITOR "$cfg"
 else
     echo "Exiting..."; exit 1
 fi

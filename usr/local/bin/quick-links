@@ -6,7 +6,7 @@
 source colors
 
 # colors and font
-FONT="Source Code Pro Medium:size=12"
+FONT="JetBrainsMono Nerd Font:size=12"
 
 declare -A links=(
 ["DuckDuckGo"]="start.duckduckgo.com"

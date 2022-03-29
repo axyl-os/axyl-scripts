@@ -2,7 +2,7 @@
 
 source colors
 
-FONT="Source Code Pro Medium:size=12"
+FONT="JetBrainsMono Nerd Font:size=12"
 
 [[ -z "$DISPLAY" ]] && exit 1
 choice=$(echo -e "0: Now\n1: Current Window\n2: Selected Area" | dmenu -c -i -l 10 -nb "$bg" -nf "$fg" -sb "$altbg" -sf "$fg" -fn "$FONT" -p "Screenshot:" | cut -d ':' -f 1)
