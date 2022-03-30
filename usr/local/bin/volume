@@ -27,12 +27,12 @@ get_icon() {
 
 # Increase Volume
 up_volume() {
-	pamixer -i 5 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
+	pamixer -i 2 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
 }
 
 # Decrease Volume
 down_volume() {
-	pamixer -d 5 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
+	pamixer -d 2 --unmute && get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)%"
 }
 
 # Toggle Mute
