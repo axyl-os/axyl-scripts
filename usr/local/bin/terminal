@@ -1,19 +1,19 @@
 #!/bin/env bash
 
 if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
-  CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/qtile/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
-  CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.dwm/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
-  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
-  CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
+  CONFIG="$HOME/.xmonad/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
-  CONFIG="$HOME/.config/spectrwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/spectrwm/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "LeftWM" ]]; then
-  CONFIG="$HOME/.config/leftwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/leftwm/alacritty/alacritty.toml"
 elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
-  CONFIG="$HOME/.config/i3/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/i3/alacritty/alacritty.toml"
 fi
 
 case "$1" in
