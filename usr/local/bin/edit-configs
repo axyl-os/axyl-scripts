@@ -9,10 +9,10 @@ FONT="JetBrainsMono Nerd Font:size=12"
 
 # list of configs
 if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
-  CONFIG="$HOME/.config/qtile/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/qtile/alacritty/alacritty.toml"
   declare -a options=( 
-  "Alacritty - $HOME/.config/qtile/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.config/qtile/alacritty/fonts.yml"
+  "Alacritty - $HOME/.config/qtile/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.config/qtile/alacritty/fonts.toml"
   "Autostart - $HOME/.config/qtile/scripts/autostart.sh"
   "Feh (Wallpaper Background) - $HOME/.config/qtile/scripts/.fehbg"
   "Picom - $HOME/.config/qtile/picom.conf"
@@ -20,10 +20,10 @@ if [[ "$DESKTOP_SESSION" == "Qtile" ]]; then
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
-  CONFIG="$HOME/.dwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.dwm/alacritty/alacritty.toml"
   declare -a options=( 
-  "Alacritty - $HOME/.dwm/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.dwm/alacritty/fonts.yml"
+  "Alacritty - $HOME/.dwm/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.dwm/alacritty/fonts.toml"
   "Autostart - $HOME/.dwm/scripts/autostart.sh"
   "Feh (Wallpaper Background) - $HOME/.dwm/.fehbg"
   "Picom - $HOME/.dwm/picom.conf"
@@ -32,10 +32,10 @@ elif [[ "$DESKTOP_SESSION" == "dwm" ]]; then
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
-  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/bspwm/alacritty/alacritty.toml"
   declare -a options=( 
-  "Alacritty - $HOME/.config/bspwm/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.config/bspwm/alacritty/fonts.yml"
+  "Alacritty - $HOME/.config/bspwm/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.config/bspwm/alacritty/fonts.toml"
   "BSPWM - $HOME/.config/bspwm/bspwmrc"
   "SXHKD - $HOME/.config/sxhkd/sxhkdrc"
   "Feh (Wallpaper Background) - $HOME/.config/bspwm/.fehbg"
@@ -43,10 +43,10 @@ elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
-  CONFIG="$HOME/.xmonad/alacritty/alacritty.yml"
+  CONFIG="$HOME/.xmonad/alacritty/alacritty.toml"
   declare -a options=( 
-  "Alacritty - $HOME/.xmonad/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.xmonad/alacritty/fonts.yml"
+  "Alacritty - $HOME/.xmonad/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.xmonad/alacritty/fonts.toml"
   "Autostart - $HOME/.xmonad/bin/autostart.sh"
   "Feh (Wallpaper Background) - $HOME/.xmonad/.fehbg"
   "Picom - $HOME/.xmonad/picom.conf"
@@ -54,10 +54,10 @@ elif [[ "$DESKTOP_SESSION" == "Xmonad" ]]; then
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
-  CONFIG="$HOME/.config/spectrwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/spectrwm/alacritty/alacritty.toml"
   declare -a options=(
-  "Alacritty - $HOME/.config/spectrwm/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.config/spectrwm/alacritty/fonts.yml"
+  "Alacritty - $HOME/.config/spectrwm/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.config/spectrwm/alacritty/fonts.toml"
   "Autostart - $HOME/.config/spectrwm/autostart.sh"
   "Feh (Wallpaper Background) - $HOME/.config/spectrwm/.fehbg"
   "Picom - $HOME/.config/spectrwm/picom.conf"
@@ -66,18 +66,18 @@ elif [[ "$DESKTOP_SESSION" == "spectrwm" ]]; then
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "LeftWM" ]]; then
-  CONFIG="$HOME/.config/leftwm/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/leftwm/alacritty/alacritty.toml"
   declare -a options=(
-  "Alacritty - $HOME/.config/leftwm/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.config/leftwm/alacritty/fonts.yml"
+  "Alacritty - $HOME/.config/leftwm/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.config/leftwm/alacritty/fonts.toml"
   "LeftWM - $HOME/.config/leftwm/config.toml"
   "Vim - $HOME/.vimrc"
   )
 elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
-  CONFIG="$HOME/.config/i3/alacritty/alacritty.yml"
+  CONFIG="$HOME/.config/i3/alacritty/alacritty.toml"
   declare -a options=(
-  "Alacritty - $HOME/.config/i3/alacritty/alacritty.yml"
-  "Alacritty (Fonts) - $HOME/.config/i3/alacritty/fonts.yml"
+  "Alacritty - $HOME/.config/i3/alacritty/alacritty.toml"
+  "Alacritty (Fonts) - $HOME/.config/i3/alacritty/fonts.toml"
   "Autostart - $HOME/.config/i3/bin/autostart.sh"
   "Picom - $HOME/.config/i3/picom.conf"
   "i3wm - $HOME/.config/i3/config"
